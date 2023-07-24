@@ -133,7 +133,9 @@ ip addr
 select any of the inet ips and paste in browser.
 
 
-passwd for wordpress: 8Yj4&Q)6hdFfbxE8Dc
+passwd for wordpress: gradlabs360
+
+
 
 
 
