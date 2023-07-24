@@ -1,0 +1,19 @@
+Use the vagrant files for creating virtual machines provided in respective folders "centos" and "ubuntu". If you look into the Vagrantfile, in the last 5 lines, there are inline commands which are called as provisioning the commands during the runtime. 
+
+
+Once installed, httpd in centos and apache2 in ubuntu, both the services are installed. For ubuntu, apache2 is active and enabled by default so if you copy the private ip in your vagrantfile and paste in browser, it will open apache2 home page. 
+
+But for centos, you might face issues because of firewall and you might see 404 (page not found). For mitigating this issue, run the below commands:
+
+
+Below are the commands:
+
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+
+setenforce 0
+
+systemctl restart httpd
+
+
+copy the private ip address and re-run it again.
