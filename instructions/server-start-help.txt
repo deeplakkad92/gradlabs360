@@ -10,9 +10,13 @@ Below are the commands:
 
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --reload
-
 setenforce 0
+systemctl restart httpd
 
+OR
+
+systemctl stop firewalld
+systemctl disable firewalld
 systemctl restart httpd
 
 
